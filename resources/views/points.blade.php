@@ -136,7 +136,7 @@
         }
     ?>
       <tr>
-        <td> <img src="{{ url('public/frontpages/images/teams/') }}/<?php echo $teamimage; ?>" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail" style="width: 30px;"></td>
+        <td> <img src="{{ url('frontpages/images/teams/') }}/<?php echo $teamimage; ?>" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail" style="width: 30px;"></td>
         <td><?php echo $point->teamName; ?></td>
         <td><?php echo $point->Played; ?></td>
         <td><?php echo $point->Won; ?></td>

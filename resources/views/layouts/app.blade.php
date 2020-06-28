@@ -88,7 +88,7 @@
 }
 
 .vertical-menu a.active {
-  background-color: #4CAF50;
+  background-color: #283983;
   color: white;
 }
 </style>

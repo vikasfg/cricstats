@@ -146,7 +146,7 @@
               <div class="col-sm-6">
                 <div class="col-sm-12">
                     <div class="col-sm-4">
-                        <img src="{{ url('public/frontpages/images/teams/') }}/<?php echo $away_team_img; ?>" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail" style="width: 80px;">
+                        <img src="{{ url('frontpages/images/teams/') }}/<?php echo $away_team_img; ?>" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail" style="width: 80px;">
                     </div>
                     <div class="col-sm-8">
                        <div style="margin-top: 16px;"> <b><?php echo $fixture->away_team_name; ?></b></div>
@@ -157,7 +157,7 @@
                <div class="col-sm-6">
                 <div class="col-sm-12">
                     <div class="col-sm-4">
-                        <img src="{{ url('public/frontpages/images/teams/') }}/<?php echo $home_team_img; ?>" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail" style="width: 80px;">
+                        <img src="{{ url('frontpages/images/teams/') }}/<?php echo $home_team_img; ?>" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail" style="width: 80px;">
                     </div>
                     <div class="col-sm-8">
                          <div style="margin-top: 16px;"> <b><?php echo $fixture->home_team_name; ?></b></div>

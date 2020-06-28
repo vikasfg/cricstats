@@ -28,29 +28,35 @@ class Cricket extends Model {
 	*/
 	public static function addTeam($data){
 		$data = Input::all ();
-		if(isset($_FILES['image']["name"]) && !empty($_FILES['image']["name"])){
+ 	if(isset($_FILES['image']["name"]) && !empty($_FILES['image']["name"])){
 		
 		$image = Input::file ( 'image' );
 		$img = time () . '.' . $image->getClientOriginalExtension ();
+
 		$destinationPath = public_path ( 'frontpages/images/teams' );
-		$image->move ( $destinationPath, $img );
+
+		//$image->move ( '/home/farida/', $image->getClientOriginalName()) ;
+		//Storage::disk('public')->put('filename', $img);
+
+         
+
 
     	}else{
     		$img = "dummy_team.jpeg";
     	}
+    		$img = "dummy_team.jpeg";
     		
 			$teamId = DB::table ('cricket_teams')->insertGetId ( array (
 				'SYMID' => isset($data['short_name'])?$data['short_name']:"",
 				'name' => isset($data['name'])?$data['name']:"",
 				'short_name' => isset($data ['short_name'])?$data ['short_name']:""
 			) );
-
 			$picture = DB::table ('cricket_team_pictures')->insertGetId ( array (
 				'team_id' => $teamId,
 				'image' => $img
 			) );
 
-			return true;
+			return 'Team Added Succesfully';
 		}
 
 	/**

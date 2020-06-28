@@ -122,7 +122,7 @@
                             $teamimage = 'dummy_team.jpeg';
                         }
                       ?>
-                     <img src="{{ url('public/frontpages/images/teams/') }}/<?php echo $teamimage; ?>" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail" style="width: 100px;">
+                     <img src="{{ url('frontpages/images/teams/') }}/<?php echo $teamimage; ?>" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail" style="width: 100px;">
                      <article>
                         <p><?php echo $team->name; ?></p>
                         <p><small><?php echo $team->short_name; ?></small></p>

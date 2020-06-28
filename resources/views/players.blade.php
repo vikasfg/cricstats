@@ -138,7 +138,7 @@
                             $playerimage = 'dummy.jpg';
                         }
                       ?>
-                     <img src="{{ url('public/frontpages/images/players/') }}/<?php echo $playerimage; ?>" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail" style="width: 105px;">
+                     <img src="{{ url('frontpages/images/players/') }}/<?php echo $playerimage; ?>" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail" style="width: 105px;">
                      <article>
                         <p>
                             <small>Name:</small> <?php echo $player->player_name; ?></br>

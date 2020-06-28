@@ -117,7 +117,8 @@
             <div class="card-body">
 
             <div class="card">
-                 <p style="padding: 15px;"> Welcome to Cricket World!</p>
+                <img src="{{ url('frontpages/images/players/icici-wc-2019-flag-homebanner.jpg') }}" height="400px">
+                 <p style="padding: 15px;"> Welcome to Cricket WorldCup 2019</p>
             </div>
 
         </div>

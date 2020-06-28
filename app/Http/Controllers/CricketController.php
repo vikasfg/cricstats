@@ -39,11 +39,14 @@ class CricketController extends Controller {
 		$validator = Validator::make ( $data, $rules );
 		
 		if ($validator->fails ()) {
-			Session::flash('message', 'Fill All the required field.');
+ 			Session::flash('message', 'Fill All the required field.');
 			return Redirect::to ( '/admin/add-team' )->withInput ( Input::except ( 'status' ) )->withErrors ( $validator );
 		} else { 
+			
+
 			$team = new Cricket ();
 			$return = $team->addTeam ($data);
+			return $return;
 			if ($return) {
 				return Redirect::to ( '/admin/list-team' )->with ( "confirm", "You have successfully Added the Team! " );
 			}
@@ -74,7 +77,7 @@ class CricketController extends Controller {
 	} 
 
 	public function listTeam() {
-
+ 
 		$teams = DB::table ( 'cricket_teams' )
 		->join ( 'cricket_team_pictures', 'cricket_team_pictures.team_id', '=', 'cricket_teams.id' )
 		->select('cricket_teams.*', 'cricket_team_pictures.image')
