@@ -34,39 +34,6 @@ Route::post ( '/admin/update-team/{id}', 'CricketController@updateTeam' );
 Route::get ( '/admin/list-team', 'CricketController@listTeam' );
 Route::get ( '/admin/delete-team', 'CricketController@delete_team' );
 
-//Common Urls
-Route::get ( '/userprofile/{device_id}', 'UserController@getUsersprofileDetail' );
-Route::get ( '/user-profile-guest/{device_id}', 'UserController@getUsersprofileGuestDetail' );
-Route::get ( '/admin/', 'AdminController@adminIndexPages' );
-Route::get ( '/admin/index', 'AdminController@adminIndexPage' );
-Route::get ( '/admin/login', 'AdminController@adminIndexPage' );
-Route::get ( '/confirmation/{token}', 'UserController@confirmation' );
-Route::post ( '/admin/login', 'AdminController@Authuanticate' );
-Route::get ( '/admin/dashboard', 'AdminController@adminDashboardPage' );
-
-//Admin profile Urls
-Route::get ( '/admin/update-profile', 'AdminController@updateProfile' );
-Route::post ( '/admin/update-profile-data', 'AdminController@updateProfileData' );
-Route::get ( '/admin/change-password', 'AdminController@changePassword' );
-Route::post ( '/admin/change-password-data', 'AdminController@changePasswordData' );
-
-// Admin user manage routes
-Route::get ( '/admin/add-user', 'AdminController@viewAddUser' );
-Route::post ( '/admin/add-user', 'AdminController@addUser' );
-Route::get ( '/admin/users', 'AdminController@users_list' );
-Route::get ( '/admin/update-user/{id}', 'AdminController@updateUser' );
-Route::post ( '/admin/update-user-data', 'AdminController@updateUserData' );
-Route::get ( '/admin/delete-user/{id}', 'AdminController@deleteUser' );
-Route::get ( '/admin/enable-disable-user/{id}', 'AdminController@enableDisableUser' );
-Route::get ( '/admin/users-list', 'AdminController@users_list' );
-
-
-Route::get ( '/admin/logout/', function () {
-	Auth::logout ();
-	Session::flash ( 'confirm', 'Logged out successfully ! Visit again.' );
-	return Redirect::to ( '/admin/index' );
-} );
-
 Auth::routes ();
 
 
