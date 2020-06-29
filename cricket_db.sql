@@ -37,6 +37,9 @@ CREATE TABLE IF NOT EXISTS `admin_users` (
 -- Dumping data for table live_quiz.admin_users: ~0 rows (approximately)
 /*!40000 ALTER TABLE `admin_users` DISABLE KEYS */;
 INSERT INTO `admin_users` (`id`, `name`, `email`, `mobile_no`, `gender`, `password`, `status_id`, `role_id`, `image`, `remember_token`, `created_at`, `updated_at`) VALUES
+	(3, 'vikas Dubey', 'vikasdubey261@gmail.com', NULL, NULL, '$2y$10$iYFA2Q7bolORiJOo7y7xoecUXkaDsivvTPoPo9JZVIGD9aQEzcQxu', 1, 1, 'OTEYKmRwKVBd7DpZNDwAxbSkyfOHGh0BvbGlnjvHb6enmU5QcnOFniFly7sg', NULL, NULL, NULL);
+
+INSERT INTO `admin_users` (`id`, `name`, `email`, `mobile_no`, `gender`, `password`, `status_id`, `role_id`, `image`, `remember_token`, `created_at`, `updated_at`) VALUES
 	(4, 'Yadu Nandan', 'ynandan55@gmail.com', NULL, NULL, '$2y$10$iYFA2Q7bolORiJOo7y7xoecUXkaDsivvTPoPo9JZVIGD9aQEzcQxu', 1, 1, 'OTEYKmRwKVBd7DpZNDwAxbSkyfOHGh0BvbGlnjvHb6enmU5QcnOFniFly7sg', NULL, NULL, NULL);
 /*!40000 ALTER TABLE `admin_users` ENABLE KEYS */;
 
